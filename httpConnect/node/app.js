@@ -19,5 +19,5 @@ app.get('/data/all', (req,res) => res.json({
     data : 'MyNodeJsServerData'
 }));
 
-app.get('/react', (req,res) => res.sendFile(`${__dirname}/reactWeb/reactWebCdn.html`))
-app.get('/react/http', (req,res) => res.sendFile(`${__dirname}/reactWeb/reactWebCdnHttp.html`))
+app.get('/react', (req,res) => res.sendFile(`${__dirname}/react/reactWebCdn.html`))
+app.get('/react/http', (req,res) => res.sendFile(`${__dirname}/react/reactWebCdnHttp.html`))
