@@ -8,4 +8,6 @@ React - Web
 - [x] 4. 컴포넌트 분리 [코드](https://github.com/doyle-flutter/basicReact/blob/main/detachComponent/react.html) / 영상 - 준비중
 - [x] 5. Context 를 통한 상태 관리 - Provider & Comsumer [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / 영상 - 준비중
 - [ ] 6. DemoProject 
-- [ ] ...
+- [ ] ...  
+- [ ] 성능 테스트
+  1. React Developer Tools[(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
