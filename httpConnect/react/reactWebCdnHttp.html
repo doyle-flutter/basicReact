@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React-HTTP</title>
+</head>
+<body>
+    <div id="fetchTag"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        class Ele extends React.Component{
+            constructor(props){
+                super(props);
+                this.state = { data: {} };
+            }
+            componentDidMount(){
+                fetch('http://localhost:3000/data/all')
+                    .then(res => res.json())
+                    .then(json => {
+                        console.log(json);
+                        this.setState({data: json})
+                        return;
+                    })
+                    .catch(e => console.log('ERR!'));
+            }
+            render(){
+                if(Object.keys(this.state.data).length !== 0){
+                    let listUi = new Array(this.state.data).map(e => (<p key={e.title}>{e.title}</p>));
+                    return listUi;
+                }
+                return (
+                    <p>{'Load....'}</p>
+                );
+            }
+        }
+        ReactDOM.render(<Ele />, document.getElementById('fetchTag'));
+    </script>
+</body>
+</html>
