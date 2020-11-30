@@ -12,3 +12,4 @@ React - Web
 - [ ] ...  
 - [ ] 성능 테스트
   1. React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [ ] 사용 / 배포 / 출시를 위한 단계 : [Next.js 이동](https://github.com/doyle-flutter/NodeJsExpressNextJsReact) ... 작성 중
