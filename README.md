@@ -1,7 +1,9 @@
 # basicReact
 React - Web
 
-### 설치없이 CDN을 통해 React 테스트
+<p align="center"><img src="https://miro.medium.com/max/1200/0*XCgoYU9sqt95P8J0.png" height="200px"></p>
+
+## 설치없이 CDN을 통해 React 테스트
 - [x] 1. CDN 적용 예시 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/reactCdn) / 영상 - 준비중
 - [x] 2. 시점(라이프사이클) LifeCycle & 상태 State & HTTP 통신 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/httpConnect) / 영상 - 준비중
 - [x] 3. Socket.io 통신 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/socketIo) / 영상 - 준비중
@@ -12,4 +14,6 @@ React - Web
 - [ ] ...  
 - [ ] 성능 테스트
   1. React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [ ] 사용 / 배포 / 출시를 위한 단계 : [Next.js 이동](https://github.com/doyle-flutter/NodeJsExpressNextJsReact) ... 작성 중
+  
+## 사용 / 배포 / 출시를 위한
+- [ ] Node.js(Express) 를 이용한 배포 : [Next.js Code](https://github.com/doyle-flutter/NodeJsExpressNextJsReact) / 영상 ... 작성 중
