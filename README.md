@@ -10,10 +10,10 @@ React - Web
 - [x] 4. 컴포넌트 분리 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/detachComponent/react.html) / 영상 - 준비중
 - [x] 5. Context 를 통한 상태 관리 - Provider & Comsumer : [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / 영상 - 준비중
 - [x] 6. Props 하위 컴포넌트로 (상태)데이터 전달 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/props/react.html) / 영상 - 준비중
-- [ ] 7. DemoProject 
-- [ ] ...  
-- [ ] 성능 테스트
-  1. React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [x] 7. HOOK & Functional Components : [코드](https://github.com/doyle-flutter/basicReact/blob/main/hookFunctional/react.html) / 영상 ... 준비중
+  
+## 성능 테스트
+- React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
   
 ## 사용 / 배포 / 출시를 위한
 - [ ] Node.js(Express) 를 이용한 배포 : [Next.js Code](https://github.com/doyle-flutter/NodeJsExpressNextJsReact) / 영상 ... 작성 중
