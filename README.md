@@ -4,8 +4,8 @@ React - Web
 <p align="center"><img src="https://miro.medium.com/max/1200/0*XCgoYU9sqt95P8J0.png" height="200px"></p>
 
 ## 설치없이 CDN을 통해 React 테스트
-- [x] 1. CDN 적용 예시 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/reactCdn) / 영상 - 준비중
-- [x] 2. 시점(라이프사이클) LifeCycle & 상태 State & HTTP 통신 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/httpConnect) / 영상 - 준비중
+- [x] 1. CDN 적용 예시 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/reactCdn) / [영상](https://youtu.be/Ug6vnMz0_2Y)
+- [x] 2. 시점(라이프사이클) LifeCycle & 상태 State & HTTP 통신 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/httpConnect) / [영상](https://youtu.be/5gONaLP1BIM)
 - [x] 3. Socket.io 통신 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/socketIo) / 영상 - 준비중
 - [x] 4. 컴포넌트 분리 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/detachComponent/react.html) / 영상 - 준비중
 - [x] 5. Context 를 통한 상태 관리 - Provider & Comsumer : [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / 영상 - 준비중
