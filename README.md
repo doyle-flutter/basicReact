@@ -11,6 +11,8 @@ React - Web
 - [x] 5. Props 하위 컴포넌트로 (상태)데이터 전달 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/props/react.html) / 영상 - 준비중
 - [x] 6. Context 를 통한 상태 관리 - Provider & Comsumer : [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / 영상 - 준비중
 - [x] 7. HOOK & Functional Components : [코드](https://github.com/doyle-flutter/basicReact/blob/main/hookFunctional/react.html) / 영상 ... 준비중
+- [ ] 8. 화면 이동(SPA) : 코드 ... 준비중 / 영상 ... 준비중
+- [ ] 9. Demo : 준비중
   
 ## 성능 테스트
 - React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
