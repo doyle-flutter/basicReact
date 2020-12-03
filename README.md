@@ -12,7 +12,7 @@ React - Web
 - [x] 6. Context 를 통한 상태 관리 - Provider & Comsumer : [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / 영상 - 준비중
 - [x] 7. HOOK & Functional Components : [코드](https://github.com/doyle-flutter/basicReact/blob/main/hookFunctional/react.html) / 영상 ... 준비중
 - [ ] 8. 화면 이동(SPA) : 코드 ... 준비중 / 영상 ... 준비중
-- [ ] 9. Demo : 코드 ... 준비중 / 배포 - [React.js & Github / URL](https://doyle-flutter.github.io/myReactDemo/)
+- [ ] 9. Demo : 코드 ... 준비중 / 배포 - [React.js & Github](https://doyle-flutter.github.io/myReactDemo/)
   
 ## 성능 테스트
 - React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
