@@ -44,8 +44,7 @@
         const EffectTestTxt = (props) => (<p>{props.data}</p>);
         const EffetTest = (props) => {
             let [titleTxt, setState] = useState("");
-            // *주의 // useEffect(() => setState(titleTxt = `${props.data}`));
-            useEffect(() => {titleTxt = `${props.data}`;});
+            useEffect(() => setState(titleTxt = `${props.data}`));
             return (
                 <div style={AllStyle.effectTestStyle}>
                     <p>{"useEffect HOOK Render 이후"}</p>
