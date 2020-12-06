@@ -9,10 +9,10 @@ React - Web
 - [x] 3. Socket.io 통신 : [코드](https://github.com/doyle-flutter/basicReact/tree/main/socketIo) / [영상](https://youtu.be/IdJ6iNemI9Q)
 - [x] 4. 컴포넌트 분리 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/detachComponent/react.html) / [영상](https://youtu.be/lbhXEx0wze4)
 - [x] 5. Props 하위 컴포넌트로 (상태)데이터 전달 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/props/react.html) / [영상](https://youtu.be/hXXI6A4q4F4)
-- [x] 6. Context 를 통한 상태 관리 - Provider & Comsumer : [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / 영상 - 준비중
+- [x] 6. Context 를 통한 상태 관리 - Provider & Comsumer : [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / [영상](https://youtu.be/njDHGT4xI5A)
 - [x] 7. HOOK & Functional Components : [코드](https://github.com/doyle-flutter/basicReact/blob/main/hookFunctional/react.html) / 영상 ... 준비중
-- [ ] 8. 화면 이동(SPA) : 코드 ... 준비중 / 영상 ... 준비중
-- [ ] 9. Demo(W3HowTo) : [코드](https://github.com/doyle-flutter/myReactDemo) ... 준비중 / 배포 ... 작업중 - [React.js & Github](https://doyle-flutter.github.io/myReactDemo/)
+- [x] 8. 화면 이동(SPA) : 코드 ... 준비중 / 영상 ... 준비중
+- [x] 9. Demo(W3HowTo) : [코드](https://github.com/doyle-flutter/myReactDemo) / 배포 [React.js & Github](https://doyle-flutter.github.io/myReactDemo/)
   
 ## 성능 테스트
 - React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
