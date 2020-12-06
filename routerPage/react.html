@@ -1,1 +1,46 @@
-.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Router</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        const {BrowserRouter, Route, Switch, Link} = ReactRouterDOM;
+        
+        const Page2 = (props) => (
+            <div>
+                <p>{"Page2"}</p>
+                <Link to='/react/nav'><p>{'이동 ->'}</p></Link>
+            </div>
+        );
+        const Page1 = (props) => {
+            return (    
+                <div>
+                    <p>{"Page1"}</p>
+                    <Link to='/react/nav/2'><p>{'이동 ->'}</p></Link>
+                </div>
+            );
+        }
+        const MainApp = (props) => {
+            return (
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path='/react/nav/2'><Page2 /></Route>
+                        <Route exact path='/react/nav'><Page1 /></Route>
+                    </Switch>
+                </BrowserRouter>
+            );
+        }
+
+        ReactDOM.render(<MainApp />, document.getElementById('root'));
+    </script>
+</body>
+</html>
