@@ -1,6 +1,6 @@
 # basicReact
 React - Web
-1 번을 학습 후 2-1 번 또는 2-2 번을 선택합니다.
+1 번을 학습 후 2-1 번 / 2-2 번을 선택합니다.
 
 <p align="center"><img src="https://miro.medium.com/max/1200/0*XCgoYU9sqt95P8J0.png" height="200px"></p>
 
@@ -13,13 +13,13 @@ React - Web
 - [x] 6. Context 를 통한 상태 관리 - Provider & Comsumer : [코드](https://github.com/doyle-flutter/basicReact/blob/main/contextState/react.html) / [영상](https://youtu.be/njDHGT4xI5A)
 - [x] 7. HOOK & Functional Components : [코드](https://github.com/doyle-flutter/basicReact/blob/main/hookFunctional/react.html) / [영상](https://youtu.be/9xBgtpqcpdU)
 - [x] 8. 화면 이동(SPA) : [코드](https://github.com/doyle-flutter/basicReact/tree/main/routerPage) / [영상](https://youtu.be/n52W3YHo8HE)
-- [x] 9. Demo(W3HowTo) : [코드](https://github.com/doyle-flutter/myReactDemo) / 배포 [React.js & Github](https://doyle-flutter.github.io/myReactDemo/)
   
 ## 2. 사용 / 배포 / 출시
 ### 2-1
 - [ ] Next.js - Node.js(Express) 를 이용한 배포 : [코드](https://github.com/doyle-flutter/NodeJsExpressNextJsReact) / 영상 ... 작성 중
 ### 2-2
-- [ ] React만 사용하여 무료 배포(Github Pages) : 코드 ...준비중 / 영상 ...준비중
+- [ ] React ClientServer + PM2 : 코드 ...준비중 / 영상 ...준비중
+- [ ] React Demo(W3HowTo) : [코드](https://github.com/doyle-flutter/myReactDemo) / 배포 [React.js & Github](https://doyle-flutter.github.io/myReactDemo/) / 영상 ...준비중
 
 ## 3 성능 테스트
 - React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
