@@ -1,4 +1,4 @@
-## React - ClientServer 를 설치하여 사용
+## React - ClientServer & PM2
   
 0. Node.js 설치(npm 같이 설치됩니다)
 1. React 프로젝트 설치
