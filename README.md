@@ -1,5 +1,5 @@
 # basicReact
-React - Web
+React - Web  
 1 번을 학습 후 2-1 번 / 2-2 번을 선택합니다.
 
 <p align="center"><img src="https://miro.medium.com/max/1200/0*XCgoYU9sqt95P8J0.png" height="200px"></p>
