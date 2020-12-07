@@ -18,7 +18,7 @@ React - Web
 ### 2-1
 - [ ] Next.js - Node.js(Express) 를 이용한 배포 : [코드](https://github.com/doyle-flutter/NodeJsExpressNextJsReact) / 영상 ... 작성 중
 ### 2-2
-- [ ] React ClientServer + PM2 : 코드 ...준비중 / 영상 ...준비중
+- [ ] React ClientServer + PM2 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/pm2React/terminal.md) / 영상 ...준비중
 - [ ] React Demo(W3HowTo) : [코드](https://github.com/doyle-flutter/myReactDemo) / 배포 [React.js & Github](https://doyle-flutter.github.io/myReactDemo/) / 영상 ...준비중
 
 ## 3 성능 테스트
