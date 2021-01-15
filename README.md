@@ -18,8 +18,8 @@ React - Web
 ### 2-1
 - [ ] Next.js - Node.js(Express) 를 이용한 배포 : [코드](https://github.com/doyle-flutter/NodeJsExpressNextJsReact) / 영상 ... 작성 중
 ### 2-2
-- [x] React ClientServer + PM2 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/pm2React/terminal.md) / [영상](https://youtu.be/3yBL5F63wrs)
-- [ ] React Demo(W3HowTo) : [코드](https://github.com/doyle-flutter/myReactDemo) / 배포 [React.js & Github](https://doyle-flutter.github.io/myReactDemo/) / 영상 ...준비중
-
+- React ClientServer + PM2 : [코드](https://github.com/doyle-flutter/basicReact/blob/main/pm2React/terminal.md) / [영상](https://youtu.be/3yBL5F63wrs)
+- React Demo(W3HowTo) : [코드](https://github.com/doyle-flutter/myReactDemo) / 배포 [React.js & Github](https://doyle-flutter.github.io/myReactDemo/) / 영상 ...준비중
+- SpringBoot 서버와 사용하는 React 예제 : [설치 없이 - CDN 으로](https://github.com/doyle-flutter/basicReact/tree/main/springReact) / [설치 없이 CDN 으로 & Spring 서버가 구름IDE를 사용 할 경우](https://github.com/doyle-flutter/basicReact/tree/main/springReact)
 ## 3 성능 테스트
 - React Developer Tools(ChromeEx) : [(URL)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
