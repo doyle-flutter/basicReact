@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN_React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        const {BrowserRouter, Route, Switch, Link} = ReactRouterDOM;
+        const {useState, useEffect} = React;
+
+        const SubPage = (props) => {
+            console.log('SubPage');
+            var [data, setState] = useState("SubData");
+            var subData = props.data;
+            setTimeout(() => {
+                props.func(subData=+1);
+            },2000);
+            function ch(e){
+                setState((data = "ASD"));  
+                return;
+            }
+            return (
+                <div>
+                    <div> - subData : {subData}</div>
+                    <div> - - subData-data : {data} <div onClick={() => ch("data")}>(Click Change)</div></div>
+                </div>
+            );
+        }
+        const MainPage = (props) => {
+            console.log('MainPage');
+            var [data, setState] = useState(0);
+            return (
+                <div>
+                    <p>data : {data} </p>
+                    <SubPage data={data} func={setState}></SubPage>
+                </div>
+            );
+        }
+        const MainApp = (props) => {
+            return (
+                <BrowserRouter>
+                    <Switch>
+                        {/* - CDN Test */}
+                        <Route path='/'><MainPage /></Route>
+                        {/* - Server Test */}
+                        {/*<Route exact path='/'><MainPage /></Route>
+                        <Route exact path='/2'><MainPage /></Route}> */}
+                    </Switch>
+                </BrowserRouter>
+            );
+        }
+
+        ReactDOM.render(<MainApp />, document.getElementById('root'));
+    </script>
+</body>
+</html>
