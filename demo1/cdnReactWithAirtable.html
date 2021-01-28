@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN_React + Airtable</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        const { BrowserRouter, Route, Switch, Link } = ReactRouterDOM;
+        const { useState, useEffect } = React;
+        const MainPage = (props) => {
+            var mainStyles = {
+                common: {},
+                main:{
+                    titleWrapper : {},
+                    title : {
+                        color: 'red',
+                    },
+                    input : {},
+                    btn : {}
+                },
+            };
+            var [inputData, setState] = useState('');
+            var [personData, setState2] = useState([]);
+            var search = async (inputValue) => {
+                var _AIRTABLE_KEY = '';
+                var _URL = `https://api.airtable.com/v0/appwOWIDaRO0TiSDf/Table%201?api_key=${_AIRTABLE_KEY}`;
+                var result = await fetch(_URL)
+                        .then(res => {
+                            if(res.status !== 200) throw new Error('NOT 200!')
+                            return res.json();
+                        })
+                        .then(json => json)
+                        .catch(e => 'error');
+                    setState2(personData = result);
+                return;
+            }
+            var onKeyDown = (e) => {
+                inputData = e.target.value;
+                if(e.code === "Enter"){
+                    if(e.target.value === '') return alert('입력해주세요');
+                    return search(e.target.value);
+                }
+            }
+            var onChange = (e) => setState(inputData=e.target.value);
+            var onClick = (e) => {
+                if(inputData === '') return alert('입력해주세요');
+                return search(inputData);
+            }
+            var viewRender = (personData) => {
+                if(personData.length === 0){
+                    return (
+                        <div>
+                            <div style={mainStyles.main.title}>
+                                <p>이름으로 검색할 수 있습니다</p>
+                            </div>
+                            <div>
+                                <input type="search" name="name" id="name" onKeyDown={onKeyDown} onChange={onChange}/>
+                            </div>
+                            <div>
+                                <button onClick={onClick}>검색</button>
+                            </div>
+                        </div>
+                    );
+                }
+                if(personData === 'error'){
+                    return (
+                        <div>
+                            <div>오류 페이지</div>
+                            <div onClick={(e) => setState2(personData = [])}>메인화면으로</div>
+                        </div>
+                    );
+                }
+                else{
+                    var personDataTag = personData.records.filter((e,i, arr) => {
+                        if(e.fields.Title === inputData) return e;
+                    }).map((e,i) => <li key={e.id}>{e.fields.Title}</li>);
+                    console.log(personDataTag);
+                    return (
+                        <div>
+                            <div>찾음</div>
+                            <div>
+                                <ul>{personDataTag}</ul>
+                            </div>
+                            <div onClick={(e) => {
+                                setState(inputData = '');
+                                setState2(personData = []);
+                            }}>다시</div>
+                        </div>
+                    );
+                }
+            }
+            return viewRender(personData);
+        }
+        const MainApp = (props) => {
+            return (
+                <BrowserRouter>
+                    <Switch>
+                        <Route path='/'><MainPage /></Route>
+                    </Switch>
+                </BrowserRouter>
+            );
+        }
+        ReactDOM.render(<MainApp />, document.getElementById('root'));
+    </script>
+</body>
+</html>
