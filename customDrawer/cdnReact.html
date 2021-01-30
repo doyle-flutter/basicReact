@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN_React</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        const { BrowserRouter, Route, Switch, Link } = ReactRouterDOM;
+        const { useState, useEffect } = React;
+
+        const Drawer = (props) => {
+            const drawerStyle = {
+                position: 'fixed',
+                width: props.check ? '30%' : '5%',
+                height: '100vh',
+                paddingTop: '5%',
+                border: '2px solid black',
+                color: 'white',
+                textAlign: 'center',
+                backgroundColor: 'blue',
+            };
+            const drawerStyleBtn = {
+                cursor: 'pointer',
+                display: 'inline-block'
+            };
+            return (
+                <div style={drawerStyle}>
+                    <p style={drawerStyleBtn} onClick={
+                        (e) => {
+                            var check = props.check;
+                            console.log(check);
+                            if(check){
+                                console.log("30%")
+                            }
+                            else{
+                                console.log("5%")
+                            }
+                            props.update(check = !props.check)
+                        }
+                    }>Drawer</p>
+                </div>
+            );
+        }
+        const MainView = (props) => {
+            const mainViewStyle = {
+                textAlign: 'center',
+                height: '100vh',
+                color: 'white',
+                paddingTop: '5%',
+                backgroundColor: 'red',
+            };
+            var [check, setState] = useState(true);
+            return(
+                <div>
+                    <Drawer check={check} update={setState}/>
+                    <div style={mainViewStyle}>
+                        <p>메인</p>
+                    </div>
+                </div>
+            );
+        }
+        const MainApp = (props) => {
+            return (
+                <BrowserRouter>
+                    <Switch>
+                        <Route path='/'><MainView /></Route>
+                    </Switch>
+                </BrowserRouter>
+            );
+        }
+        ReactDOM.render(<MainApp />, document.getElementById('root'));
+    </script>
+</body>
+</html>
