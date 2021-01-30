@@ -21,6 +21,119 @@
         const { BrowserRouter, Route, Switch, Link } = ReactRouterDOM;
         const { useState, useEffect } = React;
 
+        // 일반적으로 생각하는 문제 (1)
+        // : 상위 컴포넌트의 변수를 변경하면 될 것으로 생각하지만
+        //   하위 컴포넌트에서 props를 통해 받은 check 변수의 값을 변경할 수 없음(JS freeze 참고)
+        const DrawerError = (props) => {
+            const drawerStyle = {
+                position: 'fixed',
+                width: props.check ? '30%' : '5%',
+                height: '100vh',
+                paddingTop: '5%',
+                border: '2px solid black',
+                color: 'white',
+                textAlign: 'center',
+                backgroundColor: 'blue',
+            };
+            const drawerStyleBtn = {
+                cursor: 'pointer',
+                display: 'inline-block'
+            };
+            return (
+                <div style={drawerStyle}>
+                    <p style={drawerStyleBtn} onClick={
+                        (e) => {
+                            var check = props.check;
+                            console.log(check);
+                            if(check){
+                                console.log("30%")
+                            }
+                            else{
+                                console.log("5%")
+                            }
+                            props.check = !check;
+                        }
+                    }>Drawer</p>
+                </div>
+            );
+        }
+        const MainViewError = (props) => {
+            const mainViewStyle = {
+                textAlign: 'center',
+                height: '100vh',
+                color: 'white',
+                paddingTop: '5%',
+                backgroundColor: 'red',
+            };
+            var check = true;
+            return(
+                <div>
+                    <DrawerError check={check}/>
+                    <div style={mainViewStyle}>
+                        <p>메인</p>
+                    </div>
+                </div>
+            );
+        }
+
+        // 일반적으로 생각하는 문제 (2)
+        // : check 변수의 값만 변경되면 구현이 가능하다고 생각하지만
+        //   check 변수의 값이 변경 되어도 화면은 변경되지 않음
+        var check = true;
+
+        const DrawerError2 = (props) => {
+            const drawerStyle = {
+                position: 'fixed',
+                width: props.check ? '30%' : '5%',
+                height: '100vh',
+                paddingTop: '5%',
+                border: '2px solid black',
+                color: 'white',
+                textAlign: 'center',
+                backgroundColor: 'blue',
+            };
+            const drawerStyleBtn = {
+                cursor: 'pointer',
+                display: 'inline-block'
+            };
+            return (
+                <div style={drawerStyle}>
+                    <p style={drawerStyleBtn} onClick={
+                        (e) => {
+                            console.log(check);
+                            if(check){
+                                console.log("30%")
+                            }
+                            else{
+                                console.log("5%")
+                            }
+                            check = !check;
+                        }
+                    }>Drawer</p>
+                </div>
+            );
+        }
+        const MainViewError2 = (props) => {
+            const mainViewStyle = {
+                textAlign: 'center',
+                height: '100vh',
+                color: 'white',
+                paddingTop: '5%',
+                backgroundColor: 'red',
+            };
+            
+            return(
+                <div>
+                    <DrawerError2 check={check}/>
+                    <div style={mainViewStyle}>
+                        <p>메인</p>
+                    </div>
+                </div>
+            );
+        }
+
+        // - 해결
+        // : 변수의 값을 변경하며 화면을 다시 그려야함
         const Drawer = (props) => {
             const drawerStyle = {
                 position: 'fixed',
@@ -48,7 +161,7 @@
                             else{
                                 console.log("5%")
                             }
-                            props.update(check = !props.check)
+                            props.update(!props.check)
                         }
                     }>Drawer</p>
                 </div>
@@ -72,11 +185,19 @@
                 </div>
             );
         }
+
         const MainApp = (props) => {
             return (
                 <BrowserRouter>
                     <Switch>
+                        { /* 1 */ }
+                        { /* <Route path='/'><MainViewError /></Route> */ }
+                        { /* 2 */ }
+                        { /* <Route path='/'><MainViewError2 /></Route> */ }
+                        { /* 3 */ }
+                        { /* <Route path='/'><MainView /></Route> */ }
                         <Route path='/'><MainView /></Route>
+
                     </Switch>
                 </BrowserRouter>
             );
